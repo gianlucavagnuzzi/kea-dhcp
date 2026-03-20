@@ -1,0 +1,16 @@
+
+# https://hub.docker.com/repository/docker/rardcode/kea-dhcp/tags
+
+services:
+  kea-dhcp:
+    image: rardcode/kea-dhcp
+    container_name: kea-dhcp
+    environment:
+      - TZ=Europe/Rome
+      #- DHCP4=0 # (decomment for disable DHCPv4 server, default enabled|1)
+      #- DHCP6=1 # (enable DHCPv6 server, default disabled|0)
+    volumes:
+    - /etc/localtime:/etc/localtime:ro
+    - ./data:/var/lib/kea
+    network_mode: host
+    restart: unless-stopped
