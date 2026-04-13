@@ -1,9 +1,9 @@
 
-# https://hub.docker.com/repository/docker/rardcode/kea-dhcp/tags
+# https://hub.docker.com/repository/docker/gianlucavagnuzzi/kea-dhcp/tags
 
 services:
   kea-dhcp:
-    image: rardcode/kea-dhcp
+    image: gianlucavagnuzzi/kea-dhcp
     container_name: kea-dhcp
     environment:
       - TZ=Europe/Rome
